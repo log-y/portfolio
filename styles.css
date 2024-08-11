@@ -1,0 +1,211 @@
+/* Fonts and Colors */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: #1e2a38; /* Base background color */
+    color: #f5f5f5;
+}
+
+/* Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 42, 56, 0.9); /* Slight transparency */
+    color: #f5f5f5;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px; /* Adjusted padding */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(to bottom, #1e2a38, #2c3e50);
+}
+
+/* Timeline Section */
+#timeline {
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    padding: 60px 20px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #f5f5f5;
+}
+
+.timeline-item {
+    display: flex;
+    margin: 20px 0;
+    position: relative;
+    align-items: center;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background: #34495e;
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    width: 100%; /* Make it full width of its container */
+    max-width: 800px; /* Set a max-width to keep the content from expanding too much */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure no overflow from hidden content */
+    transition: max-width 0.3s ease; /* Smooth transition for width changes */
+}
+
+/* More Info Section */
+.more-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth transition for expanding content */
+}
+
+/* When Expanded */
+.timeline-item.expanded .more-info {
+    max-height: 800px; /* Adjust as needed */
+    padding: 10px; /* Optional: add padding if needed */
+}
+
+/* Toggle Button */
+.toggle-button {
+    background-color: #ff9696;
+    color: #f5f5f5;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #e84a5f;
+}
+
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1e2a38;
+    padding: 20px 0;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+.short-text{
+    max-width: 400px;
+}
+
+img {
+    width: auto; /* Resize to container width */
+    height: 150px; /* Maintain aspect ratio */
+}
+
+/* Basic Modern Link Styling */
+a.demo-link {
+    color: #f5f5f5; /* Light color for contrast */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Semi-bold text */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+}
+
+
+
+/* Gradient Underlined Link */
+a.demo-link.gradient {
+    position: relative;
+    color: #f5f5f5; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Semi-bold text */
+    display: inline-block; /* Ensure the underline fits the text */
+    padding-bottom: 1px; /* Space for the underline */
+}
+
+/* Hover Effect */
+a.demo-link.gradient::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Align with the bottom of the text */
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Underline height */
+    background: linear-gradient(to right, #ff6b6b, #e84a5f); /* Gradient underline */
+    transform: scaleX(0);
+    transform-origin: bottom left; /* Origin of the scaling */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+a.demo-link.gradient:hover::after {
+    transform: scaleX(1); /* Expand the underline on hover */
+}
+
+
