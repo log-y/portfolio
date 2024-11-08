@@ -1,145 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio!</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="snowman.svg" type="image/svg+xml">
 </head>
+
 <body>
     <nav id="navbar">
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#timeline">What I've Been Working On</a></li>
+            <li><a href="#academic">Academics</a></li>
             <li><a href="#links">Links</a></li>
         </ul>
     </nav>
 
     <section id="about">
-        <h1>Hi, I'm Logan</h1>
-        <p class="short-text">I'm a CS and math major at Tufts University.
-            I have proven experience in data science and software engineering through
-            previous internships and research positions. 
-            I like to build projects in React, Django, and PyTorch.
-            When I'm not coding, you can find me working out, hiking, or gaming.
-        </p>
+        <div id="about_info">
+            <h1>Hi, I'm Logan</h1>
+            <p class="short-text">I'm a CS and math major at Tufts University.
+                I have proven experience in data science and software engineering through
+                previous internships and research positions.
+                When I'm not coding, you can find me working out, hiking, or gaming.
+            </p>
+            <p>
+                Hit me up if I can help you with anything (or if you just want to play some Counter-Strike &#x1F609)
+            </p>
+        </div>
+        <img src="portfolio_me.jpg">
     </section>
 
     <section id="timeline">
         <h1>What I've Been Working On</h1>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-content">
-                    <h2>Undergraduate Researcher at Tufts University</h2>
-                    <p>Built an ecosystem for developing and distributing
-                        audio transcription plugins. (Fall 2024)</p>
-                    <button class="toggle-button">Read More</button>
-                    <div class="more-info">
-                        <p>GailBot is an audio transcription tool that accounts for
-                             the paralinguistic features of audio (like
-                            voice intonation, prosody, etc). The API software was an award-winning
-                            breakthrough in human interaction, winning the Sage Concepts Grant Award ($20,000)
-                            and being published in a prestigious journal, Dialogue and Discourse.
-                            Me and my team are working on the GailBot project to further expand its functionality.
-                            We are building a whole ecosystem around GailBot, allowing 
-                            for other developers to build and share their own machine learning
-                            plugins and distribute them to other users.
-                            We built a completely new website for uploads and downloads
-                            of these plugins using React and AWS.
-                            We are also working on a Python package (published to PyPI)
-                            where people can access developer tools to continue building
-                            their plugins. 
-                        </p>
+                <div class="timeline-content-with-picture">
+                    <div class="first-line">
+                        <figure>
+                            <img src="core_pipeline.png" style="width: 230px; height: auto;">
+                        </figure>
+                        <div class="timeline-info">
+                            <h2>Undergraduate Researcher at Tufts University</h2>
+                            <p>Built an ecosystem for developing and distributing
+                                audio transcription plugins. (Fall 2024)</p>
+                        </div>
+                    </div>
+                    <div class="second-line">
+                        <button class="toggle-button">Read More</button>
+                        <div class="more-info">
+                            <p><b>GailBot</b> is an audio transcription tool
+                                that accounts for the paralinguistic features
+                                of audio (like voice intonation, prosody, etc).
+                                The API software was an <b>award-winning breakthrough in human interaction</b>,
+                                winning the Sage Concepts Grant Award ($20,000) and being <b>published in a prestigious
+                                    journal</b>,
+                                Dialogue and Discourse.
+                                My team and I are building an ecosystem around GailBot, allowing other developers
+                                to build and share their own machine learning plugins.
+                                We built a <b>new website</b> for uploads and downloads of these plugins using
+                                <b>React</b> and <b>AWS</b>.
+                                We are also working on a <b>Python package (published to PyPI)</b> where people can
+                                access developer tools to continue
+                                building their plugins.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content-with-picture">
+                    <div class="first-line">
+                        <figure>
+                            <img src="ct_shale.png" style="width: 230px; height: auto;">
+                        </figure>
+                        <div class="timeline-info">
+                            <h2>Summer Research Assistant at the University of Houston</h2>
+                            <p>Used a number of deep learning methods to analyze
+                                processes in fluid dynamics. (Summer 2024)</p>
+                        </div>
+                    </div>
+                    <div class="second-line">
+
+                        <button class="toggle-button">Read More</button>
+                        <div class="more-info">
+                            <p>When people design any product that involves running fluids through
+                                a porous surface (like air filters, athletic wear, or a sprinkler),
+                                they track factors that will dictate how the fluid flows (like surface
+                                area, roughness, waviness). One particular measure is 'tortuosity',
+                                a <b>measure of the 'complexity' of a fluid's path</b>. My goal was to use a
+                                <b>university dataset</b> (a collection of labeled images) to help
+                                predict that tortuosity. I mainly used
+                                a <b>convolutional neural network</b> (using PyTorch) for
+                                this, analyzing images pixel-by-pixel, but I also used lighter
+                                models, like <b>linear regression models and decision trees</b>.
+                                A fun introduction to the field!
+                            </p>
+
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-content">
-                    <h2>Summer Research Assistant at the University of Houston</h2>
-                    <p>Used a number of deep learning methods to analyze 
-                        processes in fluid dynamics. (Summer 2024)</p>
-                    <button class="toggle-button">Read More</button>
-                    <div class="more-info">
-                        <p>When people design any product that involves running 
-                            fluids through a porous surface (like air filters, 
-                            athletic wear, or a sprinkler), they
-                            like to keep track of a number of factors that will dictate
-                            how that fluid will run (like the surface's surface area, roughness,
-                            waviness). One particular factor they like to measure is 'tortuosity', a measure
-                            for how 'complex' a fluid's path will be from one end of the surface
-                            to the other. My goal was to use one of the university's datasets (
-                                a collection of labeled images
-                            )
-                            to help predict that tortuosity. I mainly used a convolutional
-                            neural network (using PyTorch) for this, looking at the images
-                            pixel-by-pixel. But I also used lighter models, too, like linear
-                            regression models and decision trees. All in all, a super fun
-                            introduction to the field!
-                        </p>
+                <div class="timeline-content-with-picture">
+                    <div class="first-line">
+                        <figure>
+                            <img src="jumbocode_logo.png" alt="temp" style="width: 200px; height: auto;">
+                        </figure>
+                        <div class="timeline-info">
+                            <h2>Speech Recognition Project</h2>
+                            <p>Used PyTorch to train a neural network on a thousand hours
+                                of audio. (Summer 2024)</p>
+                        </div>
+                    </div>
+                    <div class="second-line">
+                        <button class="toggle-button">Read More</button>
+                        <div class="more-info">
+                            <p>I used a <b>CNN</b> and <b>RNN</b> to create a <b></b>speech recognition model</b> and
+                                trained
+                                it
+                                on a thousand hours of the CommonVoice English dataset. I also showcased it in a
+                                Django web app, so you can see how the model 'thinks' about its input!
+                                Here is the link to the demo:
+                            </p>
+                            <a href="https://github.com/log-y/sr-demo" class="demo-link gradient" target="_blank"
+                                rel="noopener noreferrer">Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-content">
-                    <h2>Speech Recognition Project</h2>
-                    <p>Used PyTorch to train a neural network on a thousand hours
-                        of audio. (Summer 2024)</p>
-                    <button class="toggle-button">Read More</button>
-                    <div class="more-info">
-                        <p>I used a RNN to create a speech recognition model and trained it
-                            on a thousand hours of the CommonVoice English dataset. I also showcased it in a 
-                            Django web app, so you can see how the model 'thinks' about its input!
-                            Here is the link to the demo:
-                        </p>
-                        <a href="https://github.com/log-y/sr-demo" class="demo-link gradient" target="_blank" rel="noopener noreferrer">Demo</a>
+                <div class="timeline-content-with-picture">
+                    <div class="first-line">
+                        <figure>
+                            <img src="transformer.png" alt="temp" style="width: 230px; height: auto;">
+                        </figure>
+                        <div class="timeline-info">
+                            <h2>Large Language Model Project</h2>
+                            <p>Used PyTorch to train a neural network on a few dozen gigabytes
+                                of text. (Summer 2024)</p>
+                        </div>
+                    </div>
+                    <div class="second-line">
+
+                        <button class="toggle-button">Read More</button>
+                        <div class="more-info">
+                            <p>I built a <b>transformer</b> model with 12 layers, each layer having
+                                12 heads in the self-attention stage. I downloaded some text from the CommonCrawl
+                                dataset
+                                and spend $25 training it in the cloud. I then incorporated
+                                it into a Django web app, easily letting you see the response
+                                and the predicted tokens at each stage. Here's a link to the demo:</p>
+                            <a href="https://github.com/log-y/llm-demo" class="demo-link gradient" target="_blank"
+                                rel="noopener noreferrer">Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-content">
-                    <h2>Large Language Model Project</h2>
-                    <p>Used PyTorch to train a neural network on a few dozen gigabytes
-                        of text. (Summer 2024)</p>
-                    <button class="toggle-button">Read More</button>
-                    <div class="more-info">
-                        <p>I built a transformer model with 12 layers, each layer having
-                            12 heads in the self-attention stage. I downloaded some text from the CommonCrawl dataset
-                            and spend $25 training it in the cloud. I then incorporated
-                            it into a Django web app, easily letting you see the response
-                            and the predicted tokens at each stage. Here's a link to the demo:</p>
-                            <a href="https://github.com/log-y/llm-demo" class="demo-link gradient" target="_blank" rel="noopener noreferrer">Demo</a>
+                <div class="timeline-content-with-picture">
+                    <div class="first-line">
+                        <figure>
+                            <img src="jumbocode.png" alt="temp" style="width: 230px; height: auto;">
+                        </figure>
+                        <div class="timeline-info">
+                            <h2>JumboCode/Homestart</h2>
+                            <p>Built a web service for a local homelessness non-profit over two semesters. (2023-2024)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="second-line">
+                        <button class="toggle-button">Read More</button>
+                        <div class="more-info">
+                            <p>I worked in a 12-person team to build a <b>user feedback system</b> for a local
+                                nonprofit. JumboCode (an on-campus student organization) paired my team with a local
+                                nonprofit, <b>Homestart </b>to assist
+                                them with their technical needs. We developed a
+                                web application in <b>React</b>, <b>MongoDB</b>, and <b>Tailwind</b> that would collect
+                                data from
+                                the users and run it through a set of analytics to display to the organization's
+                                administrators.
+                                This was a cool introduction to the field of software development! My tasks were usually
+                                in the space of working on CRUD operaitons and HTTP requests to our database.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h2>JumboCode</h2>
-                    <p>Built a web service for a local homelessness non-profit over two semesters. (2023-2024)</p>
-                    <button class="toggle-button">Read More</button>
-                    <div class="more-info">
-                        <p>I worked in a 12-person team following the Agile methodology. We constructed a
-                            web application in React, MongoDB, and Tailwind that would collect data from 
-                            the users and run it through a set of analytics to display to the company's administrators.
-                            This was a cool introduction to the field of software development! My tasks were usually
-                            in the space of working on CRUD operaitons and HTTP requests to our database. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
+
         </div>
     </section>
 
+    <section id="academic">
+        <h1>Academics</h1>
+
+        <!-- Navigation for sections -->
+        <div class="academic-nav">
+            <button class="academic-tab" onclick="showSection('info')">University</button>
+            <button class="academic-tab" onclick="showSection('extracurricular')">Extracurriculars</button>
+            <button class="academic-tab" onclick="showSection('classes')">Classes Taken</button>
+        </div>
+
+        <!-- Info Section -->
+        <div id="info" class="academic-section active">
+            <div class="academic-section-info">
+                <div>
+                    <h2>Tufts University</h2>
+                    <p><b>GPA:</b> 3.96</p>
+                    <p><b>Class:</b> 2027</p>
+                    <p><b>Majors:</b> Computer Science, <br>Mathematics</p>
+                </div>
+                <figure>
+                    <img src="jcc.png" style="width: 400px; height: auto">
+                </figure>
+            </div>
+        </div>
+
+        <!-- Extracurriculars Section -->
+        <div id="extracurricular" class="academic-section">
+            <h2>Extracurriculars</h2>
+            <div class="card-container">
+                <!-- Example card format for extracurriculars -->
+                <div class="card">
+                    <h3>JumboHack</h3>
+                    <p>Organizing Tufts' official hackathon, JumboHack</p>
+                </div>
+                <div class="card">
+                    <h3>JumboCode</h3>
+                    <p>Coded for the HomeStart team in 2023-2024</p>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+
+        <!-- Classes Taken Section -->
+        <div id="classes" class="academic-section">
+            <h2>Coursework</h2>
+            <div class="card-container">
+                <!-- Example card format for classes -->
+                <div class="card">
+                    <p><b>CS40</b>: Machine-Level Structure and Programming</p>
+                </div>
+                <div class="card">
+                    <p><b>CS15</b>: Data Structures</p>
+                </div>
+                <div class="card">
+                    <p><b>CS11</b>: Intro to Computer Science</p>
+                </div>
+                <div class="card">
+                    <p><b>MATH72</b>: Linear Algebra</p>
+                </div>
+                <div class="card">
+                    <p><b>MATH65</b>: Bridge to Higher Math</p>
+                </div>
+                <div class="card">
+                    <p><b>MATH42</b>: Calculus 3</p>
+                </div>
+                <div class="card">
+                    <p><b>Chinese III</b>: Intermediate Chinese</p>
+                </div>
+
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+
     <section id="links">
         <h1>Keep in touch!</h1>
-        <a href="https://github.com/log-y" class="demo-link gradient" target="_blank" rel="noopener noreferrer">My Github</a>
-        <a href="https://www.linkedin.com/in/logan-yuan-830031266/" class="demo-link gradient" target="_blank" rel="noopener noreferrer">My Linkedin</a>
-        <a href="mailto:logan.yuan@tufts.edu" class="demo-link gradient" target="_blank" rel="noopener noreferrer">Shoot Me An Email</a>
+        <a href="https://github.com/log-y" class="demo-link gradient" target="_blank" rel="noopener noreferrer">My
+            Github</a>
+        <a href="https://www.linkedin.com/in/logan-yuan-830031266/" class="demo-link gradient" target="_blank"
+            rel="noopener noreferrer">My Linkedin</a>
+        <a href="mailto:logan.yuan@tufts.edu" class="demo-link gradient" target="_blank" rel="noopener noreferrer">Shoot
+            Me An Email</a>
         </p>
     </section>
 
     <script src="script.js"></script>
 </body>
+
 </html>

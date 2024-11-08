@@ -16,3 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active"); // Add the active class
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger animation when 20% visible
+
+    timelineItems.forEach((item) => observer.observe(item));
+});
+
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.academic-section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    document.getElementById(sectionId).classList.add('active');
+}
