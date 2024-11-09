@@ -39,3 +39,27 @@ function showSection(sectionId) {
 
     document.getElementById(sectionId).classList.add('active');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const timelineItems = document.querySelectorAll(".academic");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active"); // Add the active class
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger animation when 20% visible
+
+    timelineItems.forEach((item) => observer.observe(item));
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all anchor links on the page
+    const links = document.querySelectorAll('a');
+    
+    // Loop through each link and set target="_blank"
+    links.forEach(function(link) {
+        link.setAttribute('target', '_blank');
+    });
+});

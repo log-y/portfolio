@@ -8,7 +8,8 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background: #3480d8; /* Base background color */
+    background: #3480d8;
+    /* Base background color */
     color: #f5f5f5;
 }
 
@@ -18,7 +19,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(30, 42, 56, 0.9); /* Slight transparency */
+    background-color: rgba(30, 42, 56, 0.9);
+    /* Slight transparency */
     color: #f5f5f5;
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -50,7 +52,8 @@ body {
 
 /* Section Styling */
 section {
-    padding: 60px 20px; /* Adjusted padding */
+    padding: 60px 20px;
+    /* Adjusted padding */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -84,7 +87,8 @@ section {
     height: 200px;
     width: auto;
     border-radius: 8px;
-    border: 4px solid #ff6b6b; /* Border color matching the scheme */
+    border: 4px solid #ff6b6b;
+    /* Border color matching the scheme */
     /* Optional: gradient border */
     /* border: 4px solid; */
     /* border-image: linear-gradient(to bottom, #ff6b6b, #e84a5f) 1; */
@@ -92,17 +96,17 @@ section {
 
 /* Timeline Section */
 #timeline {
-    background: linear-gradient(to bottom, #2c3e50,  #16202b);
+    background: linear-gradient(to bottom, #2c3e50, #16202b);
     padding: 60px 20px;
 }
 
 #academic {
-    background: linear-gradient(to bottom, #16202b,  #0f151b);
-
+    background: linear-gradient(to bottom, #16202b, #0f151b);
 }
 
+
 #links {
-    background: linear-gradient(to bottom, #0f151b,  #080a0d);
+    background: linear-gradient(to bottom, #0f151b, #080a0d);
 
 }
 
@@ -141,24 +145,32 @@ section {
     padding: 20px;
     border-radius: 6px;
     position: relative;
-    width: 100%; /* Make it full width of its container */
-    max-width: 800px; /* Set a max-width to keep the content from expanding too much */
+    width: 100%;
+    /* Make it full width of its container */
+    max-width: 800px;
+    /* Set a max-width to keep the content from expanding too much */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensure no overflow from hidden content */
-    transition: max-width 0.3s ease; /* Smooth transition for width changes */
+    overflow: hidden;
+    /* Ensure no overflow from hidden content */
+    transition: max-width 0.3s ease;
+    /* Smooth transition for width changes */
 }
 
-.timeline-content-with-picture{
+.timeline-content-with-picture {
     background: #34495e;
     color: #f5f5f5;
     padding: 20px;
     border-radius: 6px;
     position: relative;
-    width: 100%; /* Make it full width of its container */
-    max-width: 800px; /* Set a max-width to keep the content from expanding too much */
+    width: 100%;
+    /* Make it full width of its container */
+    max-width: 800px;
+    /* Set a max-width to keep the content from expanding too much */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensure no overflow from hidden content */
-    transition: max-width 0.3s ease; /* Smooth transition for width changes */
+    overflow: hidden;
+    /* Ensure no overflow from hidden content */
+    transition: max-width 0.3s ease;
+    /* Smooth transition for width changes */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,13 +181,15 @@ section {
 .more-info {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease; 
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 /* When Expanded */
 .timeline-item.expanded .more-info {
-    max-height: 800px; /* Adjust as needed */
-    padding: 10px; /* Optional: add padding if needed */
+    max-height: 800px;
+    /* Adjust as needed */
+    padding: 10px;
+    /* Optional: add padding if needed */
 }
 
 /* Toggle Button */
@@ -218,13 +232,15 @@ footer {
     margin-top: 50px;
 }
 
-.short-text{
+.short-text {
     max-width: 400px;
 }
 
 img {
-    width: auto; /* Resize to container width */
-    height: 150px; /* Maintain aspect ratio */
+    width: auto;
+    /* Resize to container width */
+    height: 150px;
+    /* Maintain aspect ratio */
     border-radius: 8px;
     border: 4px solid #ff6b6b;
     margin: 20px;
@@ -232,10 +248,14 @@ img {
 
 /* Basic Modern Link Styling */
 a.demo-link {
-    color: #f5f5f5; /* Light color for contrast */
-    text-decoration: none; /* Remove underline */
-    font-weight: 600; /* Semi-bold text */
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+    color: #f5f5f5;
+    /* Light color for contrast */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: 600;
+    /* Semi-bold text */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    /* Smooth transition */
 }
 
 
@@ -243,11 +263,16 @@ a.demo-link {
 /* Gradient Underlined Link */
 a.demo-link.gradient {
     position: relative;
-    color: #f5f5f5; /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: 600; /* Semi-bold text */
-    display: inline-block; /* Ensure the underline fits the text */
-    padding-bottom: 1px; /* Space for the underline */
+    color: #f5f5f5;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: 600;
+    /* Semi-bold text */
+    display: inline-block;
+    /* Ensure the underline fits the text */
+    padding-bottom: 1px;
+    /* Space for the underline */
 }
 
 /* Hover Effect */
@@ -255,49 +280,66 @@ a.demo-link.gradient::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0; /* Align with the bottom of the text */
-    width: 100%; /* Full width of the text */
-    height: 2px; /* Underline height */
-    background: linear-gradient(to right, #ff6b6b, #e84a5f); /* Gradient underline */
+    bottom: 0;
+    /* Align with the bottom of the text */
+    width: 100%;
+    /* Full width of the text */
+    height: 2px;
+    /* Underline height */
+    background: linear-gradient(to right, #ff6b6b, #e84a5f);
+    /* Gradient underline */
     transform: scaleX(0);
-    transform-origin: bottom left; /* Origin of the scaling */
-    transition: transform 0.3s ease; /* Smooth transition */
+    transform-origin: bottom left;
+    /* Origin of the scaling */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
 }
 
 a.demo-link.gradient:hover::after {
-    transform: scaleX(1); /* Expand the underline on hover */
+    transform: scaleX(1);
+    /* Expand the underline on hover */
 }
 
 
 b {
-    color: #ff6b6b; /* Accent color */
+    color: #ff6b6b;
+    /* Accent color */
     /* background-color: rgba(255, 107, 107, 0.1); */
-    padding: 2px 4px; /* Slight padding to enhance effect */
+    padding: 2px 4px;
+    /* Slight padding to enhance effect */
     border-radius: 3px;
-    font-weight: bold; /* Ensure boldness across browsers */
+    font-weight: bold;
+    /* Ensure boldness across browsers */
 }
 
 /* Define the fade-in animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Starts slightly below */
+        transform: translateY(20px);
+        /* Starts slightly below */
     }
+
     to {
         opacity: 1;
-        transform: translateY(0); /* Ends in the original position */
+        transform: translateY(0);
+        /* Ends in the original position */
     }
 }
 
 .timeline-item {
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly below */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    /* Start hidden */
+    transform: translateY(20px);
+    /* Start slightly below */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
 }
 
 /* Add the active class to trigger the animation */
 .timeline-item.active {
-    animation: fadeInUp 0.6s ease forwards; /* Play animation */
+    animation: fadeInUp 0.6s ease forwards;
+    /* Play animation */
 }
 
 /* Updated CSS for Timeline Content with Picture */
@@ -332,23 +374,16 @@ b {
     border: 4px solid #ff6b6b;
 }
 
-/* More info expanded styling */
-.more-info {
-    /* max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease; */
-}
+
 
 /* Expanded class for showing the hidden content */
 .timeline-item.expanded .more-info {
-    max-height: 800px; /* Adjust based on your content */
+    max-height: 800px;
+    /* Adjust based on your content */
     padding-top: 10px;
 }
 
-/* Text area styling */
-.timeline-info {
-    /* flex: 1; */
-}
+
 
 .toggle-button {
     background-color: #d55454;
@@ -389,7 +424,8 @@ b {
 
 /* Expanded state to reveal content */
 .timeline-item.expanded .more-info {
-    max-height: 1000px; /* Or adjust based on content */
+    max-height: 1000px;
+    /* Or adjust based on content */
     padding-top: 10px;
 }
 
@@ -410,7 +446,7 @@ b {
     background-color: #e84a5f;
 }
 
-.timeline-content-header{
+.timeline-content-header {
     display: flex;
     flex-direction: row;
     max-width: 400px;
@@ -440,10 +476,14 @@ b {
 .second-line {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    width: 100%; /* Ensure it takes full width */
-    margin-top: 10px; /* Space between image/info and button */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+    width: 100%;
+    /* Ensure it takes full width */
+    margin-top: 10px;
+    /* Space between image/info and button */
 }
 
 /* Hidden by default and revealed on toggle */
@@ -503,9 +543,11 @@ h1 {
 
 /* Updated Tab Navigation Styling */
 .academic-tab {
-    background-color: #283847; /* Darker base color to match the scheme */
+    background-color: #283847;
+    /* Darker base color to match the scheme */
     color: #f5f5f5;
-    border: 1px solid #e96239; /* Light blue border for subtle contrast */
+    border: 1px solid #e96239;
+    /* Light blue border for subtle contrast */
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
@@ -514,30 +556,40 @@ h1 {
 }
 
 .academic-tab:hover {
-    background-color: #ff6b6b; /* Accent color on hover */
+    background-color: #ff6b6b;
+    /* Accent color on hover */
     color: #f5f5f5;
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
 }
 
 
 /* Section Styling */
 .academic-section {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     padding: 20px;
     margin-top: 20px;
-    border: 2px solid #ff6b6b; /* Light blue border that fits the color scheme */
-    border-radius: 12px; /* Rounded corners */
-    max-width: 900px; /* Optional: limits width for better aesthetics */
-    margin: 0 auto; /* Centers the section */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    background-color: rgba(30, 42, 56, 0.8); /* Semi-transparent background */
-    text-align:left;
+    border: 2px solid #ff6b6b;
+    /* Light blue border that fits the color scheme */
+    border-radius: 12px;
+    /* Rounded corners */
+    max-width: 900px;
+    /* Optional: limits width for better aesthetics */
+    margin: 0 auto;
+    /* Centers the section */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Soft shadow for depth */
+    background-color: rgba(30, 42, 56, 0.8);
+    /* Semi-transparent background */
+    text-align: left;
 }
 
 
 
 .academic-section.active {
-    display: block; /* Display active section */
+    display: block;
+    /* Display active section */
 }
 
 
@@ -574,52 +626,69 @@ h1 {
     transform: scale(1.05);
 }
 
-.academic-section-info{
+.academic-section-info {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     text-align: left;
-    
+
 }
 
-.academic-section, .academic-section p, .academic-section h2 {
-    font-family: 'Poppins', sans-serif; /* or your desired font */
-    font-size: 1rem; /* Adjust as needed */
-    color: #f5f5f5; /* Ensure consistent color */
+.academic-section,
+.academic-section p,
+.academic-section h2 {
+    font-family: 'Poppins', sans-serif;
+    /* or your desired font */
+    font-size: 1rem;
+    /* Adjust as needed */
+    color: #f5f5f5;
+    /* Ensure consistent color */
 }
 
 /* Card Styling */
 .card {
-    background-color: #ffffff; /* Light background for readability */
-    color: #2c3e50; /* Dark text for readability */
-    border: 1px solid #d1d1d1; /* Soft border for subtle definition */
+    background-color: #ffffff;
+    /* Light background for readability */
+    color: #2c3e50;
+    /* Dark text for readability */
+    border: 1px solid #d1d1d1;
+    /* Soft border for subtle definition */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for depth */
     padding: 15px;
     width: 250px;
     transition: transform 0.2s;
 }
 
 .card h3 {
-    color: #3480d8; /* Accent color for card headers */
+    color: #3480d8;
+    /* Accent color for card headers */
     margin: 0;
     font-weight: bold;
 }
 
 .card p {
-    color: #444; /* Slightly darker for better readability */
+    color: #444;
+    /* Slightly darker for better readability */
 }
 
 .card:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
-    background-color: #f5f8fa; /* Lighter background on hover for visual feedback */
+    transform: scale(1.05);
+    /* Slight enlargement on hover */
+    background-color: #f5f8fa;
+    /* Lighter background on hover for visual feedback */
 }
 
 .academic-section h2 {
-    font-size: 1.8rem; /* Increase font size for visibility */
-    font-weight: bold; /* Ensure bold styling */
-    color: #ffffff; /* Use an accent color for consistency */
-    margin-bottom: 10px; /* Add spacing below the header */
+    font-size: 1.8rem;
+    /* Increase font size for visibility */
+    font-weight: bold;
+    /* Ensure bold styling */
+    color: #ffffff;
+    /* Use an accent color for consistency */
+    margin-bottom: 10px;
+    /* Add spacing below the header */
 }
