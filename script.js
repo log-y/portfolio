@@ -31,6 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
     timelineItems.forEach((item) => observer.observe(item));
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const timelineItems = document.querySelectorAll("#about_info, #about-pic, #academic-content");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active"); // Add the active class
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger animation when 20% visible
+
+    timelineItems.forEach((item) => observer.observe(item));
+});
+
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.academic-section');
     sections.forEach(section => {
@@ -63,3 +77,17 @@ document.addEventListener("DOMContentLoaded", function() {
         link.setAttribute('target', '_blank');
     });
 });
+
+function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll(".academic-section");
+    sections.forEach((section) => {
+        section.classList.remove("active");
+        section.classList.add("hidden"); // Hide all sections initially
+    });
+
+    // Show and animate the selected section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.remove("hidden"); // Make visible
+    selectedSection.classList.add("active"); // Trigger animation
+}

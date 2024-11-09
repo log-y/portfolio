@@ -1,694 +1,680 @@
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
-
 /* Fonts and Colors */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    background: #3480d8;
-    /* Base background color */
-    color: #f5f5f5;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	background: #3480d8;
+	/* Base background color */
+	color: #f5f5f5;
 }
-
 /* Navbar Styling */
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(30, 42, 56, 0.9);
-    /* Slight transparency */
-    color: #f5f5f5;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(30, 42, 56, 0.9);
+	/* Slight transparency */
+	color: #f5f5f5;
+	z-index: 1000;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 #navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
 }
-
 #navbar ul li {
-    margin: 0 20px;
+	margin: 0 20px;
 }
-
 #navbar ul li a {
-    color: #f5f5f5;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+	color: #f5f5f5;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.1rem;
+	transition: color 0.3s ease;
 }
-
 #navbar ul li a:hover {
-    color: #ff6b6b;
+	color: #ff6b6b;
 }
-
 /* Section Styling */
 section {
-    padding: 60px 20px;
-    /* Adjusted padding */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+	padding: 60px 20px;
+	/* Adjusted padding */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
-
 /* About Section */
 #about {
-    background: linear-gradient(to bottom, #283847, #2c3e50);
+	background: linear-gradient(to bottom, #283847, #2c3e50);
 }
-
 #about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    padding: 60px 20px;
-    text-align: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	padding: 60px 20px;
+	text-align: left;
 }
-
 #about_info {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
 }
-
 #about img {
-    margin-left: 50px;
-    height: 200px;
-    width: auto;
-    border-radius: 8px;
-    border: 4px solid #ff6b6b;
-    /* Border color matching the scheme */
-    /* Optional: gradient border */
-    /* border: 4px solid; */
-    /* border-image: linear-gradient(to bottom, #ff6b6b, #e84a5f) 1; */
+	margin-left: 50px;
+	height: 200px;
+	width: auto;
+	border-radius: 8px;
+	border: 4px solid #ff6b6b;
+	/* Border color matching the scheme */
+	/* Optional: gradient border */
+	/* border: 4px solid;
+	*/
+	/* border-image: linear-gradient(to bottom, #ff6b6b, #e84a5f) 1;
+	*/
 }
-
+#about_info {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+#about_info.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+#about-pic {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+#about-pic.active {
+	opacity: 1;
+	transform: translateY(0);
+}
 /* Timeline Section */
 #timeline {
-    background: linear-gradient(to bottom, #2c3e50, #16202b);
-    padding: 60px 20px;
+	background: linear-gradient(to bottom, #2c3e50, #16202b);
+	padding: 60px 20px;
 }
-
 #academic {
-    background: linear-gradient(to bottom, #16202b, #0f151b);
+	background: linear-gradient(to bottom, #16202b, #0f151b);
 }
-
-
 #links {
-    background: linear-gradient(to bottom, #0f151b, #080a0d);
-
+	background: linear-gradient(to bottom, #0f151b, #080a0d);
 }
-
 .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 40px;
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	padding-left: 40px;
 }
-
 .timeline:before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: #f5f5f5;
+	content: '';
+	position: absolute;
+	left: 20px;
+	top: 0;
+	height: 100%;
+	width: 2px;
+	background: #f5f5f5;
 }
-
 .timeline-item {
-    display: flex;
-    margin: 20px 0;
-    position: relative;
-    align-items: center;
+	display: flex;
+	margin: 20px 0;
+	position: relative;
+	align-items: center;
 }
-
 .timeline-item:nth-child(even) {
-    flex-direction: row-reverse;
+	flex-direction: row-reverse;
 }
-
 /* Timeline Content */
 .timeline-content {
-    background: #34495e;
-    color: #f5f5f5;
-    padding: 20px;
-    border-radius: 6px;
-    position: relative;
-    width: 100%;
-    /* Make it full width of its container */
-    max-width: 800px;
-    /* Set a max-width to keep the content from expanding too much */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    /* Ensure no overflow from hidden content */
-    transition: max-width 0.3s ease;
-    /* Smooth transition for width changes */
+	background: #34495e;
+	color: #f5f5f5;
+	padding: 20px;
+	border-radius: 6px;
+	position: relative;
+	width: 100%;
+	/* Make it full width of its container */
+	max-width: 800px;
+	/* Set a max-width to keep the content from expanding too much */
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	/* Ensure no overflow from hidden content */
+	transition: max-width 0.3s ease;
+	/* Smooth transition for width changes */
 }
-
 .timeline-content-with-picture {
-    background: #34495e;
-    color: #f5f5f5;
-    padding: 20px;
-    border-radius: 6px;
-    position: relative;
-    width: 100%;
-    /* Make it full width of its container */
-    max-width: 800px;
-    /* Set a max-width to keep the content from expanding too much */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    /* Ensure no overflow from hidden content */
-    transition: max-width 0.3s ease;
-    /* Smooth transition for width changes */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+	background: #34495e;
+	color: #f5f5f5;
+	padding: 20px;
+	border-radius: 6px;
+	position: relative;
+	width: 100%;
+	/* Make it full width of its container */
+	max-width: 800px;
+	/* Set a max-width to keep the content from expanding too much */
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	/* Ensure no overflow from hidden content */
+	transition: max-width 0.3s ease;
+	/* Smooth transition for width changes */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 }
-
 /* More Info Section */
 .more-info {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
 }
-
 /* When Expanded */
 .timeline-item.expanded .more-info {
-    max-height: 800px;
-    /* Adjust as needed */
-    padding: 10px;
-    /* Optional: add padding if needed */
+	max-height: 800px;
+	/* Adjust as needed */
+	padding: 10px;
+	/* Optional: add padding if needed */
 }
-
 /* Toggle Button */
 .toggle-button {
-    background-color: #d55454;
-    color: #f5f5f5;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	background-color: #d55454;
+	color: #f5f5f5;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
-
 .toggle-button:hover {
-    background-color: #e84a5f;
+	background-color: #e84a5f;
 }
-
-
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #ff6b6b;
+	font-family: 'Playfair Display', serif;
+	font-size: 3rem;
+	margin-bottom: 20px;
+	color: #ff6b6b;
+	/* position: relative;
+	*/
 }
-
+#academic h1 {
+	/* position: relative;
+	*/
+}
 p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    line-height: 1.6;
-    color: #d1d1d1;
+	font-size: 1.2rem;
+	max-width: 800px;
+	line-height: 1.6;
+	color: #d1d1d1;
 }
-
 /* Footer Styling */
 footer {
-    background-color: #1e2a38;
-    padding: 20px 0;
-    text-align: center;
-    color: #f5f5f5;
-    font-size: 0.9rem;
-    margin-top: 50px;
+	background-color: #1e2a38;
+	padding: 20px 0;
+	text-align: center;
+	color: #f5f5f5;
+	font-size: 0.9rem;
+	margin-top: 50px;
 }
-
 .short-text {
-    max-width: 400px;
+	max-width: 400px;
 }
-
 img {
-    width: auto;
-    /* Resize to container width */
-    height: 150px;
-    /* Maintain aspect ratio */
-    border-radius: 8px;
-    border: 4px solid #ff6b6b;
-    margin: 20px;
+	width: auto;
+	/* Resize to container width */
+	height: 150px;
+	/* Maintain aspect ratio */
+	border-radius: 8px;
+	border: 4px solid #ff6b6b;
+	margin: 20px;
 }
-
 /* Basic Modern Link Styling */
 a.demo-link {
-    color: #f5f5f5;
-    /* Light color for contrast */
-    text-decoration: none;
-    /* Remove underline */
-    font-weight: 600;
-    /* Semi-bold text */
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    /* Smooth transition */
+	color: #f5f5f5;
+	/* Light color for contrast */
+	text-decoration: none;
+	/* Remove underline */
+	font-weight: 600;
+	/* Semi-bold text */
+	transition: color 0.3s ease, border-bottom 0.3s ease;
+	/* Smooth transition */
 }
-
-
-
 /* Gradient Underlined Link */
 a.demo-link.gradient {
-    position: relative;
-    color: #f5f5f5;
-    /* Text color */
-    text-decoration: none;
-    /* Remove underline */
-    font-weight: 600;
-    /* Semi-bold text */
-    display: inline-block;
-    /* Ensure the underline fits the text */
-    padding-bottom: 1px;
-    /* Space for the underline */
+	position: relative;
+	color: #f5f5f5;
+	/* Text color */
+	text-decoration: none;
+	/* Remove underline */
+	font-weight: 600;
+	/* Semi-bold text */
+	display: inline-block;
+	/* Ensure the underline fits the text */
+	padding-bottom: 1px;
+	/* Space for the underline */
 }
-
 /* Hover Effect */
 a.demo-link.gradient::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    /* Align with the bottom of the text */
-    width: 100%;
-    /* Full width of the text */
-    height: 2px;
-    /* Underline height */
-    background: linear-gradient(to right, #ff6b6b, #e84a5f);
-    /* Gradient underline */
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    /* Origin of the scaling */
-    transition: transform 0.3s ease;
-    /* Smooth transition */
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* Align with the bottom of the text */
+	width: 100%;
+	/* Full width of the text */
+	height: 2px;
+	/* Underline height */
+	background: linear-gradient(to right, #ff6b6b, #e84a5f);
+	/* Gradient underline */
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	/* Origin of the scaling */
+	transition: transform 0.3s ease;
+	/* Smooth transition */
 }
-
 a.demo-link.gradient:hover::after {
-    transform: scaleX(1);
-    /* Expand the underline on hover */
+	transform: scaleX(1);
+	/* Expand the underline on hover */
 }
-
-
 b {
-    color: #ff6b6b;
-    /* Accent color */
-    /* background-color: rgba(255, 107, 107, 0.1); */
-    padding: 2px 4px;
-    /* Slight padding to enhance effect */
-    border-radius: 3px;
-    font-weight: bold;
-    /* Ensure boldness across browsers */
+	color: #ff6b6b;
+	/* Accent color */
+	/* background-color: rgba(255, 107, 107, 0.1);
+	*/
+	padding: 2px 4px;
+	/* Slight padding to enhance effect */
+	border-radius: 3px;
+	font-weight: bold;
+	/* Ensure boldness across browsers */
 }
-
 /* Define the fade-in animation */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-        /* Starts slightly below */
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        /* Ends in the original position */
-    }
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+		/* Starts slightly below */
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+		/* Ends in the original position */
+	}
 }
-
 .timeline-item {
-    opacity: 0;
-    /* Start hidden */
-    transform: translateY(20px);
-    /* Start slightly below */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    /* Smooth transition */
+	opacity: 0;
+	/* Start hidden */
+	transform: translateY(20px);
+	/* Start slightly below */
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	/* Smooth transition */
 }
-
 /* Add the active class to trigger the animation */
 .timeline-item.active {
-    animation: fadeInUp 0.6s ease forwards;
-    /* Play animation */
+	animation: fadeInUp 0.6s ease forwards;
+	/* Play animation */
 }
-
 /* Updated CSS for Timeline Content with Picture */
 .timeline-content-with-picture {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    background: #34495e;
-    color: #f5f5f5;
-    padding: 20px;
-    border-radius: 6px;
-    max-width: 1000px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: max-width 0.3s ease;
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+	background: #34495e;
+	color: #f5f5f5;
+	padding: 20px;
+	border-radius: 6px;
+	max-width: 1000px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: max-width 0.3s ease;
 }
-
 /* Style for figure element to hold the image */
 .timeline-content-with-picture figure {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 300px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 300px;
 }
-
 /* Image styling for responsive sizing */
 .timeline-content-with-picture img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 4px solid #ff6b6b;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	border: 4px solid #ff6b6b;
 }
-
-
-
 /* Expanded class for showing the hidden content */
 .timeline-item.expanded .more-info {
-    max-height: 800px;
-    /* Adjust based on your content */
-    padding-top: 10px;
+	max-height: 800px;
+	/* Adjust based on your content */
+	padding-top: 10px;
 }
-
-
-
 .toggle-button {
-    background-color: #d55454;
-    color: #f5f5f5;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+	background-color: #d55454;
+	color: #f5f5f5;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 10px;
 }
-
 .toggle-button:hover {
-    background-color: #e84a5f;
+	background-color: #e84a5f;
 }
-
 /* Keep the basic layout as before for .timeline-content-with-picture */
 .timeline-content-with-picture {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    background: #34495e;
-    color: #f5f5f5;
-    padding: 20px;
-    border-radius: 6px;
-    max-width: 1000px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: max-width 0.3s ease;
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+	background: #34495e;
+	color: #f5f5f5;
+	padding: 20px;
+	border-radius: 6px;
+	max-width: 1000px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: max-width 0.3s ease;
 }
-
 /* Ensure the more-info section is initially hidden and reveals smoothly */
 .more-info {
-    /* max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding-top 0.3s ease;
-    padding-top: 0; */
+	/* max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding-top 0.3s ease;
+	padding-top: 0;
+	*/
 }
-
 /* Expanded state to reveal content */
 .timeline-item.expanded .more-info {
-    max-height: 1000px;
-    /* Or adjust based on content */
-    padding-top: 10px;
+	max-height: 1000px;
+	/* Or adjust based on content */
+	padding-top: 10px;
 }
-
 /* Styling for the toggle button */
 .toggle-button {
-    display: block;
-    margin-top: 10px;
-    background-color: #d55454;
-    color: #f5f5f5;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	display: block;
+	margin-top: 10px;
+	background-color: #d55454;
+	color: #f5f5f5;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
-
 .toggle-button:hover {
-    background-color: #e84a5f;
+	background-color: #e84a5f;
 }
-
 .timeline-content-header {
-    display: flex;
-    flex-direction: row;
-    max-width: 400px;
+	display: flex;
+	flex-direction: row;
+	max-width: 400px;
 }
-
 .timeline-content-with-picture {
-    display: flex;
-    flex-direction: column;
-    background: #34495e;
-    color: #f5f5f5;
-    padding: 20px;
-    border-radius: 6px;
-    max-width: 1000px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: max-width 0.3s ease;
-    gap: 10px;
+	display: flex;
+	flex-direction: column;
+	background: #34495e;
+	color: #f5f5f5;
+	padding: 20px;
+	border-radius: 6px;
+	max-width: 1000px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: max-width 0.3s ease;
+	gap: 10px;
 }
-
 /* First line with image and primary info */
 .first-line {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
-
 /* Second line with 'Read More' button and additional info */
 .second-line {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center items horizontally */
-    justify-content: center;
-    /* Center items vertically */
-    width: 100%;
-    /* Ensure it takes full width */
-    margin-top: 10px;
-    /* Space between image/info and button */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* Center items horizontally */
+	justify-content: center;
+	/* Center items vertically */
+	width: 100%;
+	/* Ensure it takes full width */
+	margin-top: 10px;
+	/* Space between image/info and button */
 }
-
 /* Hidden by default and revealed on toggle */
 .more-info {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding-top 0.3s ease;
-    padding-top: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding-top 0.3s ease;
+	padding-top: 0;
 }
-
 .timeline-item.expanded .more-info {
-    max-height: 1000px;
-    padding-top: 10px;
+	max-height: 1000px;
+	padding-top: 10px;
 }
-
 .toggle-button {
-    background-color: #d55454;
-    color: #f5f5f5;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* align-self: flex-start; */
+	background-color: #d55454;
+	color: #f5f5f5;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	/* align-self: flex-start;
+	*/
 }
-
 .toggle-button:hover {
-    background-color: #e84a5f;
+	background-color: #e84a5f;
 }
-
 /* General Styling */
 #academic {
-    padding: 20px;
-    /* background: #f5f5f5; */
-    /* color: #333; */
-    text-align: center;
-    /* border: 2px solid #3480d8;  */
-    /* border-radius: 12px; */
-    /* max-width: 900px;  */
-    /* margin: 0 auto;  */
-    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  */
-    /* background-color: rgba(30, 42, 56, 0.8); */
+	padding: 20px;
+	/* background: #f5f5f5;
+	*/
+	/* color: #333;
+	*/
+	text-align: center;
+	/* border: 2px solid #3480d8;
+	*/
+	/* border-radius: 12px;
+	*/
+	/* max-width: 900px;
+	*/
+	/* margin: 0 auto;
+	*/
+	/* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	*/
+	/* background-color: rgba(30, 42, 56, 0.8);
+	*/
 }
-
 h1 {
-    font-size: 2.5rem;
-    color: #ff6b6b;
+	font-size: 2.5rem;
+	color: #ff6b6b;
+	position: relative;
 }
-
 /* Tab Navigation Styling */
 .academic-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin: 20px 0;
 }
-
 /* Updated Tab Navigation Styling */
 .academic-tab {
-    background-color: #283847;
-    /* Darker base color to match the scheme */
-    color: #f5f5f5;
-    border: 1px solid #e96239;
-    /* Light blue border for subtle contrast */
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+	background-color: #283847;
+	/* Darker base color to match the scheme */
+	color: #f5f5f5;
+	border: 1px solid #e96239;
+	/* Light blue border for subtle contrast */
+	padding: 10px 20px;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 4px;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
-
 .academic-tab:hover {
-    background-color: #ff6b6b;
-    /* Accent color on hover */
-    color: #f5f5f5;
-    transform: translateY(-2px);
-    /* Slight lift on hover */
+	background-color: #ff6b6b;
+	/* Accent color on hover */
+	color: #f5f5f5;
+	transform: translateY(-2px);
+	/* Slight lift on hover */
 }
-
-
 /* Section Styling */
 .academic-section {
-    display: none;
-    /* Hidden by default */
-    padding: 20px;
-    margin-top: 20px;
-    border: 2px solid #ff6b6b;
-    /* Light blue border that fits the color scheme */
-    border-radius: 12px;
-    /* Rounded corners */
-    max-width: 900px;
-    /* Optional: limits width for better aesthetics */
-    margin: 0 auto;
-    /* Centers the section */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* Soft shadow for depth */
-    background-color: rgba(30, 42, 56, 0.8);
-    /* Semi-transparent background */
-    text-align: left;
+	display: none;
+	/* Hidden by default */
+	padding: 20px;
+	margin-top: 20px;
+	border: 2px solid #ff6b6b;
+	/* Light blue border that fits the color scheme */
+	border-radius: 12px;
+	/* Rounded corners */
+	max-width: 900px;
+	/* Optional: limits width for better aesthetics */
+	margin: 0 auto;
+	/* Centers the section */
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	/* Soft shadow for depth */
+	background-color: rgba(30, 42, 56, 0.8);
+	/* Semi-transparent background */
+	text-align: left;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
-
-
 .academic-section.active {
-    display: block;
-    /* Display active section */
+	display: block;
+	opacity: 1;
+	transform: translateY(0);
 }
-
-
-
+.academic-section.active {
+	/* display: block;
+	*/
+	/* Display active section */
+}
+#academic-content {
+	opacity: 0;
+	min-height: 600px;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+#academic-content.active {
+	opacity: 1;
+	transform: translateY(0);
+}
 /* Card Container */
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 10px;
 }
-
 /* Card Styling */
 .card {
-    background-color: #483531;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 250px;
-    transition: transform 0.2s;
+	background-color: #483531;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 15px;
+	width: 250px;
+	transition: transform 0.2s;
 }
-
 .card h3 {
-    color: #3480d8;
-    margin: 0;
+	color: #3480d8;
+	margin: 0;
 }
-
 .card p {
-    color: #666;
+	color: #666;
 }
-
 .card:hover {
-    transform: scale(1.05);
+	transform: scale(1.05);
 }
-
 .academic-section-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-align: left;
-
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-align: left;
 }
-
-.academic-section,
-.academic-section p,
-.academic-section h2 {
-    font-family: 'Poppins', sans-serif;
-    /* or your desired font */
-    font-size: 1rem;
-    /* Adjust as needed */
-    color: #f5f5f5;
-    /* Ensure consistent color */
+.academic-section,.academic-section p,.academic-section h2 {
+	font-family: 'Poppins', sans-serif;
+	/* or your desired font */
+	font-size: 1rem;
+	/* Adjust as needed */
+	color: #f5f5f5;
+	/* Ensure consistent color */
 }
-
 /* Card Styling */
 .card {
-    background-color: #ffffff;
-    /* Light background for readability */
-    color: #2c3e50;
-    /* Dark text for readability */
-    border: 1px solid #d1d1d1;
-    /* Soft border for subtle definition */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Slight shadow for depth */
-    padding: 15px;
-    width: 250px;
-    transition: transform 0.2s;
+	background-color: #ffffff;
+	/* Light background for readability */
+	color: #2c3e50;
+	/* Dark text for readability */
+	border: 1px solid #d1d1d1;
+	/* Soft border for subtle definition */
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/* Slight shadow for depth */
+	padding: 15px;
+	width: 250px;
+	transition: transform 0.2s;
 }
-
 .card h3 {
-    color: #3480d8;
-    /* Accent color for card headers */
-    margin: 0;
-    font-weight: bold;
+	color: #3480d8;
+	/* Accent color for card headers */
+	margin: 0;
+	font-weight: bold;
 }
-
 .card p {
-    color: #444;
-    /* Slightly darker for better readability */
+	color: #444;
+	/* Slightly darker for better readability */
 }
-
 .card:hover {
-    transform: scale(1.05);
-    /* Slight enlargement on hover */
-    background-color: #f5f8fa;
-    /* Lighter background on hover for visual feedback */
+	transform: scale(1.05);
+	/* Slight enlargement on hover */
+	background-color: #f5f8fa;
+	/* Lighter background on hover for visual feedback */
 }
-
 .academic-section h2 {
-    font-size: 1.8rem;
-    /* Increase font size for visibility */
-    font-weight: bold;
-    /* Ensure bold styling */
-    color: #ffffff;
-    /* Use an accent color for consistency */
-    margin-bottom: 10px;
-    /* Add spacing below the header */
+	font-size: 1.8rem;
+	/* Increase font size for visibility */
+	font-weight: bold;
+	/* Ensure bold styling */
+	color: #ffffff;
+	/* Use an accent color for consistency */
+	margin-bottom: 10px;
+	/* Add spacing below the header */
+}
+/* Initial hidden state */
+.academic-section {
+	display: none;
+	opacity: 0;
+	transform: translateY(20px);
+}
+/* Ease-in animation when section becomes active */
+.academic-section.active {
+	display: block;
+	animation: easeInAnimation 0.5s ease forwards;
+	/* Apply animation */
+}
+/* Keyframes for the ease-in animation */
+@keyframes easeInAnimation {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
