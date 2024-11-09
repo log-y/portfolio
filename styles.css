@@ -247,6 +247,57 @@ a.demo-link {
 	transition: color 0.3s ease, border-bottom 0.3s ease;
 	/* Smooth transition */
 }
+
+a.web-link {
+	color: #d804ca;
+	/* Light color for contrast */
+	text-decoration: none;
+	/* Remove underline */
+	font-weight: 600;
+	/* Semi-bold text */
+	transition: color 0.3s ease, border-bottom 0.3s ease;
+	/* Smooth transition */
+}
+
+/* Gradient Underlined Link */
+a.web-link.gradient {
+	position: relative;
+	color: #eb92a7;
+	/* Text color */
+	text-decoration: none;
+	/* Remove underline */
+	font-weight: 600;
+	/* Semi-bold text */
+	display: inline-block;
+	/* Ensure the underline fits the text */
+	padding-bottom: 1px;
+	/* Space for the underline */
+}
+
+/* Hover Effect */
+a.web-link.gradient::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* Align with the bottom of the text */
+	width: 100%;
+	/* Full width of the text */
+	height: 2px;
+	/* Underline height */
+	background: linear-gradient(to right, #ff6b6b, #e84a5f);
+	/* Gradient underline */
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	/* Origin of the scaling */
+	transition: transform 0.3s ease;
+	/* Smooth transition */
+}
+a.web-link.gradient:hover::after {
+	transform: scaleX(1);
+	/* Expand the underline on hover */
+}
+
 /* Gradient Underlined Link */
 a.demo-link.gradient {
 	position: relative;
