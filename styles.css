@@ -77,12 +77,7 @@ section {
 	width: auto;
 	border-radius: 8px;
 	border: 4px solid #ff6b6b;
-	/* Border color matching the scheme */
-	/* Optional: gradient border */
-	/* border: 4px solid;
-	*/
-	/* border-image: linear-gradient(to bottom, #ff6b6b, #e84a5f) 1;
-	*/
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 #about_info {
 	opacity: 0;
@@ -133,6 +128,7 @@ section {
 	margin: 20px 0;
 	position: relative;
 	align-items: center;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
 }
 .timeline-item:nth-child(even) {
 	flex-direction: row-reverse;
@@ -164,7 +160,7 @@ section {
 	/* Make it full width of its container */
 	max-width: 800px;
 	/* Set a max-width to keep the content from expanding too much */
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	/* Ensure no overflow from hidden content */
 	transition: max-width 0.3s ease;
@@ -173,6 +169,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
+    /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); */
 }
 /* More Info Section */
 .more-info {
@@ -345,6 +342,7 @@ b {
 	justify-content: center;
 	flex-shrink: 0;
 	width: 300px;
+    
 }
 /* Image styling for responsive sizing */
 .timeline-content-with-picture img {
@@ -352,6 +350,8 @@ b {
 	height: auto;
 	border-radius: 8px;
 	border: 4px solid #ff6b6b;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2); /* Bottom-right shadow */
+
 }
 /* Expanded class for showing the hidden content */
 .timeline-item.expanded .more-info {
@@ -368,9 +368,13 @@ b {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 	margin-top: 10px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2); /* Bottom-right shadow */
+
 }
 .toggle-button:hover {
 	background-color: #e84a5f;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2); /* Bottom-right shadow */
+
 }
 /* Keep the basic layout as before for .timeline-content-with-picture */
 .timeline-content-with-picture {
