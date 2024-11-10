@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function() {
     // Select all anchor links on the page
-    const links = document.querySelectorAll('a');
+    const links = document.querySelectorAll('a:not(#navbar a)');
     
     // Loop through each link and set target="_blank"
     links.forEach(function(link) {
