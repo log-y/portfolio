@@ -105,6 +105,9 @@ section {
 #academic {
 	background: linear-gradient(to bottom, #16202b, #0f151b);
 }
+#academic-header {
+	padding-top: 150px;
+}
 #links {
 	background: linear-gradient(to bottom, #0f151b, #080a0d);
 }
@@ -574,6 +577,7 @@ h1 {
 	cursor: pointer;
 	font-weight: bold;
 	border-radius: 4px;
+	font-size: 16px;
 	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 .academic-tab:hover {
