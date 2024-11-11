@@ -655,7 +655,7 @@ h1 {
 	color: #666;
 }
 .card:hover {
-	transform: scale(1.05);
+	/* transform: scale(1.05); */
 }
 .academic-section-info {
 	display: flex;
@@ -699,7 +699,7 @@ h1 {
 	/* Slightly darker for better readability */
 }
 .card:hover {
-	transform: scale(1.05);
+	/* transform: scale(1.05); */
 	/* Slight enlargement on hover */
 	background-color: #f5f8fa;
 	/* Lighter background on hover for visual feedback */
