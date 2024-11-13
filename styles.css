@@ -738,6 +738,21 @@ h1 {
 	}
 }
 
-.icon{
+
+
+.tech-used{
+	text-align:left;
+	display: flex;
+	flex-direction: row;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+
+
+img.icon{
 	border: none;
+	height: 25px;
+	width: auto;
+	margin-right: 10px;
 }
