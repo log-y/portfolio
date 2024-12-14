@@ -113,10 +113,27 @@ section {
 }
 .timeline {
 	position: relative;
-	max-width: 800px;
+	max-width: 60%;
 	margin: 0 auto;
 	padding-left: 40px;
+	box-sizing:border-box;
 }
+@media (max-width: 768px) {
+    .timeline-content-with-picture figure {
+        display: none; /* Hides the picture */
+    }
+
+    .timeline-info {
+        width: 100%; /* Ensures the timeline-info spans full width */
+    }
+
+    .first-line {
+        display: flex;
+        flex-direction: column; /* Stacks content vertically */
+        align-items: flex-start;
+    }
+}
+
 .timeline:before {
 	content: '';
 	position: absolute;
@@ -145,7 +162,7 @@ section {
 	position: relative;
 	width: 100%;
 	/* Make it full width of its container */
-	max-width: 800px;
+	/* max-width: 800px; */
 	/* Set a max-width to keep the content from expanding too much */
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
@@ -161,7 +178,7 @@ section {
 	position: relative;
 	width: 100%;
 	/* Make it full width of its container */
-	max-width: 800px;
+	/* max-width: 800px; */
 	/* Set a max-width to keep the content from expanding too much */
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
@@ -384,7 +401,7 @@ b {
 	color: #f5f5f5;
 	padding: 20px;
 	border-radius: 6px;
-	max-width: 1000px;
+	/* max-width: 1000px; */
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	transition: max-width 0.3s ease;
 }
@@ -395,7 +412,7 @@ b {
 	align-items: center;
 	justify-content: center;
 	flex-shrink: 0;
-	width: 300px;
+	width: 50%;
     
 }
 /* Image styling for responsive sizing */
@@ -439,7 +456,7 @@ b {
 	color: #f5f5f5;
 	padding: 20px;
 	border-radius: 6px;
-	max-width: 1000px;
+	/* max-width: 1000px; */
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	transition: max-width 0.3s ease;
 }
@@ -484,7 +501,7 @@ b {
 	color: #f5f5f5;
 	padding: 20px;
 	border-radius: 6px;
-	max-width: 1000px;
+	/* max-width: 1000px; */
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	transition: max-width 0.3s ease;
 	gap: 10px;
@@ -740,19 +757,20 @@ h1 {
 
 
 
-.tech-used{
-	text-align:left;
-	display: flex;
-	flex-direction: row;
-	padding-left: 30px;
-	padding-right: 30px;
+.tech-used {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 10px; /* Ensures spacing between icons */
+    box-sizing: border-box; /* Ensures padding is accounted for within the width */
 }
 
-
-
-img.icon{
-	border: none;
-	height: 25px;
-	width: auto;
-	margin-right: 10px;
+img.icon {
+    border: none;
+    height: 25px;
+    width: auto;
+    flex-shrink: 0; /* Prevents icons from shrinking */
+    margin-right: 10px;
 }
