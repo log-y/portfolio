@@ -291,7 +291,7 @@
   
   .instructions-text {
 	font-size: 0.8rem;
-	margin: 0 0 8px;
+	margin: 0 0 16px;
   }
   
   .btn:hover {
@@ -302,6 +302,7 @@
 	/* margin: 20px 0; */
 	font-size: 18px;
 	min-height: 27px;
+	margin-bottom: 10px;
   }
   
   .result {
