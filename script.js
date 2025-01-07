@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hide all sections initially
     sections.forEach(section => (section.style.display = 'none'));
 
+    // const pianoKeys = document.querySelectorAll('.piano .key');
+    // pianoKeys.forEach((key, index) => {
+    //     setTimeout(() => {
+    //         key.classList.add('key-loaded'); // Trigger animation
+    //     }, index * 50); // Stagger animation, faster since keys are smaller
+    // });
+
     // Show the default section (e.g., Experience)
     showSection(experienceSection);
 
@@ -35,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     pianoBtn.addEventListener("click", () => {
         hideAllSections();
         showSection(pianoSection);
+        hidePianoKeys();
+        animatePianoKeys();
     });
 
     // Helper function to hide all sections
@@ -68,6 +77,26 @@ document.addEventListener("DOMContentLoaded", () => {
             icon.classList.add('icon-loaded'); // Trigger animation
         }, index * 100); // Stagger each icon
     });
+
+    // Function to animate piano keys when the piano section is shown
+    function animatePianoKeys() {
+        const pianoKeys = document.querySelectorAll('.piano .key');
+        pianoKeys.forEach((key, index) => {
+            setTimeout(() => {
+                key.classList.add('key-loaded'); // Trigger animation for each key
+            }, index * 50); // Stagger animation for each key
+        });
+    }
+
+    // Function to hide piano keys (remove the animation effect)
+    function hidePianoKeys() {
+        const pianoKeys = document.querySelectorAll('.piano .key');
+        pianoKeys.forEach(key => {
+            key.classList.remove('key-loaded'); // Remove the animation class
+            // key.style.opacity = '0'; // Reset opacity to make them hidden
+            // key.style.transform = 'translateY(20px)'; // Reset transform to initial position
+        });
+    }
 });
 
 
