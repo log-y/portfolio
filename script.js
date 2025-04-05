@@ -277,7 +277,7 @@ function startChordGame() {
 }
 
 function checkSelection(selected, target, element) {
-    // if (!selected) return false;
+    if (!selected) return false;
     const isCorrect = selected === target;
     element.style.backgroundColor = isCorrect ? '#a8d5ba' : '#f28a8c';
 
