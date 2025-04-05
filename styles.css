@@ -1,10 +1,10 @@
 /* Box-sizing rule to include padding in height/width calculation */
 * {
 	box-sizing: border-box;
-  }
-  
-  /* Use Inter and Poppins fonts */
-  body {
+}
+
+/* Use Inter and Poppins fonts */
+body {
 	font-family: 'Inter', sans-serif;
 	/* Default font is Inter */
 	margin: 0;
@@ -15,87 +15,100 @@
 	background: #f9f9f9;
 	color: #333;
 	padding: 20px;
-  }
-  
-  /* Subtle overlay with rounded corners */
-  .overlay-container {
+}
+
+/* Subtle overlay with rounded corners */
+.overlay-container {
 	width: 100%;
 	max-width: 1200px;
 	height: 100%;
 	border-radius: 12px;
 	background: transparent;
-  }
-  
-  .container {
+}
+
+.container {
 	display: flex;
 	width: 100%;
 	height: 100%;
-  }
-  
-  .sidebar {
+}
+
+.sidebar {
 	width: 30%;
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	background: transparent;
-  }
-  
-  .sidebar h1 {
+}
+
+.sidebar h1 {
 	margin: 0 0 20px;
 	font-family: 'Inter', sans-serif;
-	/* Use Inter for the name */
 	font-size: 3rem;
-	/* Larger font for name */
-  }
-  
-  .sidebar p {
+}
+
+.sidebar p {
 	margin: 5px 0;
 	font-size: 1rem;
-  }
-  
-  .main {
+}
+
+.sidebar h1,
+.sidebar p,
+.sidebar .sidebar-button {
+    opacity: 0;
+    /* transform: translateY(20px); */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+h1.sidebar-loaded,
+p.sidebar-loaded,
+.sidebar-button.sidebar-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main {
 	width: 70%;
 	padding: 40px;
 	background: transparent;
 	overflow-y: auto;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-  }
-  
-  .main::-webkit-scrollbar {
+}
+
+.main::-webkit-scrollbar {
 	display: none;
-  }
-  
-  .experience-card {
+}
+
+.experience-card {
 	background: #fff;
 	padding: 20px;
 	margin-bottom: 20px;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	max-width: 90%;
-  
+
 	opacity: 0;
 	transform: translateY(20px);
 	transition: opacity 0.4s ease, transform 0.4s ease;
-  }
-  
-  .experience-card.loaded{
+}
+
+.experience-card.loaded {
 	opacity: 1;
 	transform: translateY(0);
-  }
-  
-  .experience-card .date {
+}
+
+.experience-card .date {
 	font-size: 0.75rem;
-  }
-  
-  .experience-card h3 {
+}
+
+.experience-card h3 {
 	margin: 0 0 5px;
 	font-family: 'Poppins', sans-serif;
 	/* Use Poppins for titles */
-  }
-  
-  .experience-card p {
+}
+
+.experience-card p {
 	margin: 0;
 	line-height: 1.5;
 	font-family: 'Inter', sans-serif;
@@ -104,27 +117,27 @@
 	/* Light weight for a thinner appearance */
 	font-size: 1rem;
 	/* Keep the font size consistent */
-  }
-  
-  
-  .paragraphs {
+}
+
+
+.paragraphs {
 	margin-top: 5px;
-  }
-  
-  .paragraphs p {
+}
+
+.paragraphs p {
 	padding-top: 5px;
 	font-size: 0.8rem;
-  }
-  
-  .buttons {
+}
+
+.buttons {
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-  }
-  
-  /* Button styling */
-  .sidebar-button {
+}
+
+/* Button styling */
+.sidebar-button {
 	margin-top: 10px;
 	/* padding: 10px 20px; */
 	background-color: transparent;
@@ -135,77 +148,81 @@
 	border-radius: 1px;
 	cursor: pointer;
 	text-align: left;
-  }
-  
-  .sidebar-button:hover {
+	transform: translateY(-20px);
+}
+
+.sidebar-button:hover {
 	background-color: #f1f1f1;
-  }
-  
-  .icons {
+}
+
+.icons {
 	margin-top: 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	gap: 20px;
-  }
-  
-  .icon {
+}
+
+.icon {
 	width: 20px;
-  
 	opacity: 0;
-	transform: translateX(-20px); /* Start slightly off-screen to the left */
-	transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
-  }
-  
-  .icon.icon-loaded {
+	transform: translateX(-20px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.icon.icon-loaded {
 	opacity: 1;
 	transform: translateX(0);
-  }
-  
-  .icons .tech-stack {
+}
+
+.icons .tech-stack {
 	font-size: 0.9rem;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	gap: 20px;
-  
-  }
-  
-  /* piano related things */
-  .piano-container {
+
+}
+
+/* piano related things */
+.piano-container {
 	background: #f0f0f0;
 	padding: 20px;
 	border-radius: 10px;
 	text-align: center;
 	font-family: 'Inter', sans-serif;
 	/* overflow-x: auto; */
-  }
-  
-  .piano-container-inner {
+}
+
+.piano-container-inner {
 	overflow-x: auto;
-  }
-  
-  .piano-container-inner::-webkit-scrollbar {
-	width: 0px; /* Hide vertical scrollbar */
-	height: 0px; /* Hide horizontal scrollbar */
-  }
-  
-  .piano-container-inner::-webkit-scrollbar-track {
-	background: transparent; /* Make the track transparent */
-  }
-  
-  .piano {
+}
+
+.piano-container-inner::-webkit-scrollbar {
+	width: 0px;
+	/* Hide vertical scrollbar */
+	height: 0px;
+	/* Hide horizontal scrollbar */
+}
+
+.piano-container-inner::-webkit-scrollbar-track {
+	background: transparent;
+	/* Make the track transparent */
+}
+
+.piano {
 	display: inline-flex;
 	position: relative;
 	margin: 20px auto;
-	overflow-x: auto; /* Enables horizontal scrolling */
+	overflow-x: auto;
+	/* Enables horizontal scrolling */
 	white-space: nowrap;
-  }
-  
-  .key {
+}
+
+.key {
 	width: 60px;
 	height: 200px;
 	background: white;
@@ -223,16 +240,17 @@
 	/* transition: background-color 0.3s ease; */
 
 	opacity: 0;
-    transform: translateY(20px); /* Start slightly off-screen */
-    transition: opacity 0.5s ease !important;
-  }
+	transform: translateY(20px);
+	/* Start slightly off-screen */
+	transition: opacity 0.5s ease !important;
+}
 
-  .key.key-loaded{
+.key.key-loaded {
 	opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .key.black {
+	transform: translateY(0);
+}
+
+.key.black {
 	background: #000;
 	width: 40px;
 	height: 120px;
@@ -240,44 +258,44 @@
 	margin-right: -20px;
 	z-index: 1;
 	color: white;
-  }
+}
 
-  .key.black.key-loaded{
+.key.black.key-loaded {
 	opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .key.active {
+	transform: translateY(0);
+}
+
+.key.active {
 	background: #cce;
-  }
-  
-  .key.black.active {
+}
+
+.key.black.active {
 	background: #666;
-  }
-  
-  .key.incorrect {
+}
+
+.key.incorrect {
 	background-color: #ffb3b3 !important;
-  }
-  
-  .key.black.incorrect {
+}
+
+.key.black.incorrect {
 	background-color: #cc0000 !important;
-  }
-  
-  .key.correct {
+}
+
+.key.correct {
 	background-color: #90EE90 !important;
-  }
-  
-  .key.black.correct {
+}
+
+.key.black.correct {
 	background-color: #006400 !important;
-  }
-  
-  .instructions {
+}
+
+.instructions {
 	margin: 20px auto;
 	color: #666;
 	max-width: 600px;
-  }
-  
-  .btn {
+}
+
+.btn {
 	/* padding: 10px 20px; */
 	font-size: 1rem;
 	background: #e2e2e2;
@@ -287,73 +305,79 @@
 	cursor: pointer;
 	/* margin: 0 10px; */
 	font-family: 'Inter', Poppins;
-  }
-  
-  .instructions-text {
+}
+
+.instructions-text {
 	font-size: 0.8rem;
 	margin: 0 0 16px;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
 	background-color: #dddddd;
-  }
-  
-  .game-status {
+}
+
+.game-status {
 	/* margin: 20px 0; */
 	font-size: 18px;
 	min-height: 27px;
 	margin-bottom: 10px;
-  }
-  
-  .result {
+}
+
+.result {
 	font-weight: bold;
 	margin: 10px 0;
 	min-height: 24px;
-  }
-  
-  .correct-text {
+}
+
+.correct-text {
 	color: #4CAF50;
-  }
-  
-  .incorrect-text {
+}
+
+.incorrect-text {
 	color: #f44336;
-  }
-  
-  .game1-container {
+}
+
+.game1-container {
 	background: #f0f0f0;
 	padding: 20px;
 	border-radius: 10px;
 	text-align: center;
 	font-family: 'Inter', sans-serif;
 	margin-top: 10px;
-  }
-  
-  .dropdowns {
+}
+
+.dropdowns {
 	margin-top: 15px;
 	margin-left: 0px
-  }
-  
-  .game-status{
+}
+
+.game-status {
 	font-size: 0.8rem;
-  }
-  
-  #piano-section{
+}
+
+#piano-section {
 	display: flex;
 	flex-direction: column;
-  }
-  
-  #piano-section h3 {
+}
+
+#piano-section h3 {
 	/* font-size: 1.5rem; */
 	text-align: left;
 	margin: 0 0 8px;
-  }
-  
-  .game-info{
+}
+
+#piano-section p {
+	/* font-size: 1.5rem; */
 	text-align: left;
-  }
-  
-  /* Dropdowns */
-  select {
+	margin: 0 0 8px;
+}
+
+.game-info {
+	text-align: left;
+}
+
+/* Dropdowns */
+select {
 	width: 48%;
 	padding: 5px;
 	margin: 5px 1%;
@@ -361,42 +385,52 @@
 	border-radius: 4px;
 	background-color: #f9f9f9;
 	font-size: 0.9rem;
-  }
-  
-  .controls {
+}
+
+.controls {
 	text-align: left;
-  }
-  
-  .dropdowns{ 
+}
+
+.dropdowns {
 	transition: background-color 0.5s ease;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
 	.container {
-	  flex-direction: column; /* Stack sidebar on top of main */
+		flex-direction: column;
+		/* Stack sidebar on top of main */
 	}
-  
+
 	.sidebar {
-	  width: 100%; /* Sidebar takes full width on small screens */
-	  margin-bottom: 10px; /* Add some space between sidebar and main */
-	  height: calc(100vh - 250px); /* Sidebar takes full height minus padding */
-	  overflow-y: auto; /* Enable vertical scroll if sidebar content exceeds screen height */
-	  padding-top: 30px;
+		width: 100%;
+		/* Sidebar takes full width on small screens */
+		margin-bottom: 10px;
+		/* Add some space between sidebar and main */
+		height: calc(100vh - 250px);
+		/* Sidebar takes full height minus padding */
+		overflow-y: auto;
+		/* Enable vertical scroll if sidebar content exceeds screen height */
+		padding-top: 30px;
 	}
-  
+
 	.sidebar::-webkit-scrollbar {
-	  width: 0px; /* Hide vertical scrollbar */
-	  height: 0px; /* Hide horizontal scrollbar */
+		width: 0px;
+		/* Hide vertical scrollbar */
+		height: 0px;
+		/* Hide horizontal scrollbar */
 	}
-  
+
 	.main {
-	  padding-top: 20px; /* Add space above the main content */
-	  width: 100%;
-	  height: calc(100vh - 40px); /* Main takes the remaining height */
-	  overflow-y: auto; /* Enable scrolling for the main content */
+		padding-top: 20px;
+		/* Add space above the main content */
+		width: 100%;
+		height: calc(100vh - 40px);
+		/* Main takes the remaining height */
+		overflow-y: auto;
+		/* Enable scrolling for the main content */
 	}
-  
+
 	.social-icons {
-	  margin: 20px 0 0 8px;
+		margin: 20px 0 0 8px;
 	}
-  }
+}

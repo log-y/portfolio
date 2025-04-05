@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize all modules
     Navigation.init();
     PianoAnimation.init();
+    SidebarLoader.init();
     SocialIcons.init();
     
     // Initialize audio-related features with user interaction
