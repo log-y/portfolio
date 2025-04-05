@@ -239,7 +239,7 @@ function getNoteFrequency(rootNote, semitones) {
   }
 
 
-//   chord game 
+//  logic for chord game 
 let chordGameActive = false;
 let targetRoot = null;
 let targetQuality = null;
@@ -338,7 +338,7 @@ playButton.addEventListener('click', () => {
 
 
 
-
+//Logic for piano
 
 // Handle keyboard input of virtual piano
 document.addEventListener('keydown', (e) => {
