@@ -1,0 +1,89 @@
+<div class="experience-card">
+    <div class="piano-container">
+        <h3>Virtual Piano</h3>
+        <p class="instructions-text" id="">Click a key or use your computer's keyboard to start!</p>
+        <div class="piano-container-inner">
+
+            <div class="piano">
+                <div class="key" data-note="C" data-key="a">A</div>
+                <div class="key black" data-note="C#" data-key="w">W</div>
+                <div class="key" data-note="D" data-key="s">S</div>
+                <div class="key black" data-note="D#" data-key="e">E</div>
+                <div class="key" data-note="E" data-key="d">D</div>
+                <div class="key" data-note="F" data-key="f">F</div>
+                <div class="key black" data-note="F#" data-key="t">T</div>
+                <div class="key" data-note="G" data-key="g">G</div>
+                <div class="key black" data-note="G#" data-key="y">Y</div>
+                <div class="key" data-note="A" data-key="h">H</div>
+                <div class="key black" data-note="A#" data-key="u">U</div>
+                <div class="key" data-note="B" data-key="j">J</div>
+
+                <!-- Second Octave -->
+                <div class="key" data-note="C2" data-key="k">K</div>
+                <div class="key black" data-note="C#2" data-key="o">O</div>
+                <div class="key" data-note="D2" data-key="l">L</div>
+                <div class="key black" data-note="D#2" data-key="p">P</div>
+                <div class="key" data-note="E2" data-key=";">;</div>
+                <div class="key" data-note="F2" data-key="'">'</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="experience-card">
+
+    <div class="game1-container">
+        <h3>Guess the note</h3>
+        <div class="game-info">
+            <div class="game-status" id="gameStatus">
+                <p class="instructions-text" id="gameStatus-text">Press Start to begin the game!</p>
+            </div>
+            <div class="game-controls">
+                <button id="gameButton" class="btn">Start Game</button>
+                <!-- <button id="playAgain" class="btn" style="display: none;">Play Note Again</button> -->
+            </div>
+        </div>
+    </div>
+    <!-- <div class="result" id="result"></div> -->
+</div>
+<div class="experience-card">
+
+    <div class="game1-container">
+        <h3>Guess the chord</h3>
+        <div class="game-info">
+            <div class="game-status">
+                <p class="instructions-text" id="game2Status-text">Press Start to begin the game!
+                </p>
+            </div>
+            <div class="game-controls">
+                <button id="playButton" class="btn">Start Game</button>
+                <div>
+                    <select class="dropdowns" id="rootNote">
+                        <option value="">Select Root Note</option>
+                        <option value="C">C</option>
+                        <option value="C#">C#</option>
+                        <option value="D">D</option>
+                        <option value="D#">D#</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="F#">F#</option>
+                        <option value="G">G</option>
+                        <option value="G#">G#</option>
+                        <option value="A">A</option>
+                        <option value="A#">A#</option>
+                        <option value="B">B</option>
+                    </select>
+                    <select class="dropdowns" id="chordQuality">
+                        <option value="">Select Chord Quality</option>
+                        <option value="major">Major</option>
+                        <option value="minor">Minor</option>
+                        <option value="diminished">Diminished</option>
+                        <option value="augmented">Augmented</option>
+                        <option value="dominant">Dominant</option>
+                    </select>
+                </div>
+            </div>
+            <!-- <button id="submitGuess" disabled>Submit Guess</button> -->
+        </div>
+    </div>
+    <!-- <div class="result" id="result"></div> -->
+</div>
