@@ -20,11 +20,13 @@ const Navigation = (function() {
         projectsSection = document.getElementById('projects-section');
         academicSection = document.getElementById('academics-section');
         pianoSection = document.getElementById('piano-section');
+        skillsSection = document.getElementById('skills-section');
 
         experienceBtn = document.getElementById('experience-btn');
         projectsBtn = document.getElementById('projects-btn');
         academicsBtn = document.getElementById('academics-btn');
         pianoBtn = document.getElementById('piano-btn');
+        skillsBtn = document.getElementById('skills-btn');
 
         // Hide all sections initially
         sections.forEach(section => (section.style.display = 'none'));
@@ -53,12 +55,18 @@ const Navigation = (function() {
             showSection(academicSection);
         });
 
+        skillsBtn.addEventListener("click", () => {
+            hideAllSections();
+            showSection(skillsSection);
+        });
+
         pianoBtn.addEventListener("click", () => {
             hideAllSections();
             showSection(pianoSection);
             PianoAnimation.hidePianoKeys();
             PianoAnimation.animatePianoKeys();
         });
+
     }
     
     // Hide all content sections

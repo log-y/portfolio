@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Tree Portfolio</title>
+    <link rel="stylesheet" href="tree-style.css">
+</head>
+
+<body>
+
+    <div class="experience-card">
+
+        <h1>My Skills</h1>
+
+        <div class="skill-tree-container" id="skillTreeContainer">
+            <div class="skill-tree-viewport" id="skillTreeViewport">
+                <svg id="skill-lines"></svg>
+                <ul class="skill-tree">
+                    <li>
+                        <div class="node" data-source="Comprehensive technical foundation">My Technical Skills</div>
+                        <ul>
+
+                            <!-- SOFTWARE ENGINEERING -->
+                            <li>
+                                <div class="node" data-source="Building reliable and maintainable systems">Software
+                                    Engineering</div>
+                                <ul>
+
+                                    <!-- DESIGN & PLANNING -->
+                                    <li>
+                                        <div class="node"
+                                            data-source="Planning effective system structure and behavior">Software
+                                            Design & Architecture</div>
+                                        <ul>
+                                            <li>
+                                                <div class="node" data-source="Abstracting functionality into modules">
+                                                    Modular Design</div>
+                                            </li>
+                                            <li>
+                                                <div class="node"
+                                                    data-source="Structuring code around objects and classes">
+                                                    Object-Oriented Programming</div>
+                                            </li>
+                                            <li>
+                                                <div class="node" data-source="Best practices for maintainable code">
+                                                    SOLID Principles</div>
+                                            </li>
+                                            <li>
+                                                <div class="node" data-source="Reusable design solutions">Design
+                                                    Patterns</div>
+                                            </li>
+                                            <li>
+                                                <div class="node" data-source="Planning feature rollouts and timelines">
+                                                    Project Management</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!-- DEVELOPMENT -->
+                                    <li>
+                                        <div class="node" data-source="Translating designs into functional code">
+                                            Software Development</div>
+                                        <ul>
+                                            <li>
+                                                <div class="node" data-source="Building backend services and logic">
+                                                    Backend Development</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node">Python</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">C++</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">Java</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">SQL</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">MongoDB</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="node" data-source="Creating user interfaces">Frontend
+                                                    Development</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node">React</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">Tailwind CSS</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!-- TESTING -->
+                                    <li>
+                                        <div class="node" data-source="Validating software behavior and reliability">
+                                            Software Testing</div>
+                                        <ul>
+                                            <li>
+                                                <div class="node">Unit Testing</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">Integration Testing</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">End-to-End Testing</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!-- DEPLOYMENT -->
+                                    <li>
+                                        <div class="node" data-source="Shipping software into real-world environments">
+                                            Deployment and Hosting</div>
+                                        <ul>
+                                            <li>
+                                                <div class="node"
+                                                    data-source="Deploying directly onto custom hardware using ADB">
+                                                    Embedded Deployment</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">AWS</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node">EC2</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">S3</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">RDS</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <!-- MACHINE LEARNING -->
+                            <li>
+                                <div class="node" data-source="End-to-end AI/ML project execution">Data Science</div>
+                                <ul>
+
+                                    <!-- PIPELINE -->
+                                    <li>
+                                        <div class="node" data-source="Managing the full ML lifecycle">ML Pipeline</div>
+                                        <ul>
+
+                                            <li>
+                                                <div class="node" data-source="Data loading and preprocessing">Data
+                                                    Preparation</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node">Pandas</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">NumPy</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <div class="node" data-source="Extracting meaningful input features">
+                                                    Feature Engineering</div>
+
+                                            </li>
+
+                                            <li>
+                                                <div class="node" data-source="Training predictive models">Model
+                                                    Training</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node">Gradient Descent</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">Hyperparameter Tuning</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <div class="node"
+                                                    data-source="Evaluating performance and generalization">Model
+                                                    Evaluation</div>
+
+                                            </li>
+
+                                            <li>
+                                                <div class="node" data-source="Making ML models efficient">Model
+                                                    Optimization</div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node">Gradient Accumulation</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node">Mixed Precision</div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <!-- ML MODELS -->
+                                    <li>
+                                        <div class="node" data-source="Modeling techniques used in practice">Models
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="node">Linear Regression</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">Convolutional Neural Networks</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">Long Short-Term Memory (LSTM)</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">Transformer LLMs</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">YOLO (Object Detection)</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <!-- LIBRARIES -->
+                                    <li>
+                                        <div class="node" data-source="ML libraries and tools">Frameworks and Libraries
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="node">PyTorch</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">Scikit-learn</div>
+                                            </li>
+                                            <li>
+                                                <div class="node">OpenCV</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <!-- MATHEMATICS -->
+                            <li>
+                                <div class="node" data-source="Theoretical and applied mathematical foundation">
+                                    Mathematics</div>
+                                <ul>
+                                    <li>
+                                        <div class="node">Linear Algebra</div>
+                                    </li>
+                                    <li>
+                                        <div class="node">Calculus (I, II, III)</div>
+                                    </li>
+                                    <li>
+                                        <div class="node">Probability & Statistics</div>
+                                    </li>
+                                    <li>
+                                        <div class="node">Proof Writing & Logic</div>
+                                    </li>
+                                    <li>
+                                        <div class="node">Mathematical Modeling</div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/tree.js"></script>
+</body>
+
+</html>
