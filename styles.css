@@ -100,10 +100,11 @@ p.sidebar-loaded,
 
 .experience-card .date {
 	font-size: 0.75rem;
+	margin: 0px 0 8px;
 }
 
 .experience-card h3 {
-	margin: 0 0 5px;
+	margin: 0 0 2px;
 	font-family: 'Poppins', sans-serif;
 	/* Use Poppins for titles */
 }
