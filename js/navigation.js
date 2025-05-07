@@ -38,19 +38,31 @@ const Navigation = (function() {
     
     // Set up button click events
     function setupEventListeners() {
+
+        buttons = [experienceBtn, projectsBtn, academicsBtn, pianoBtn];
+
+        function setActiveButton(activeBtn) {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            activeBtn.classList.add('active');
+            // console.log("button click!")
+        }
+
         experienceBtn.addEventListener("click", () => {
             hideAllSections();
             showSection(experienceSection);
+            setActiveButton(experienceBtn);
         });
 
         projectsBtn.addEventListener("click", () => {
             hideAllSections();
             showSection(projectsSection);
+            setActiveButton(projectsBtn);
         });
 
         academicsBtn.addEventListener("click", () => {
             hideAllSections();
             showSection(academicSection);
+            setActiveButton(academicsBtn);
         });
 
         pianoBtn.addEventListener("click", () => {
@@ -58,7 +70,9 @@ const Navigation = (function() {
             showSection(pianoSection);
             PianoAnimation.hidePianoKeys();
             PianoAnimation.animatePianoKeys();
+            setActiveButton(pianoBtn);
         });
+        setActiveButton(experienceBtn);
     }
     
     // Hide all content sections
